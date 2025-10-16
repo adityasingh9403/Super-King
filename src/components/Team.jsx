@@ -4,6 +4,7 @@ import { X, User, Shield, Zap } from 'lucide-react'; // बेहतरीन �
 
 // खिलाड़ियों की विस्तृत और अपडेटेड जानकारी
 const players = [
+<<<<<<< HEAD
   { 
     name: 'Harsh Verma', 
     role: 'Captain, Batter', 
@@ -164,6 +165,168 @@ const players = [
     bowlingStyle: 'Right-arm Off Spin',
     bio: 'A good hard-hitting batsman who can score quickly and put pressure on the bowlers.'
   }
+=======
+  { 
+    name: 'Harsh Verma', 
+    role: 'Captain, Batter', 
+    img: '/captain.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Off Spin',
+    bio: 'A key leader in the team, known for his exceptional wicket-keeping skills and solid batting.'
+  },
+  { 
+    name: 'Nitin Patel', 
+    role: 'Vice-Captain, Batter', 
+    img: '/nitin.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Medium',
+    bio: 'An outstanding batter and the strategic anchor of the team, leading from the front.'
+  },
+  { 
+    name: 'Ram Nath Yogi', 
+    role: 'Batter', 
+    img: '/yogi.png', // Assuming ramnath -> ram
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Medium',
+    bio: 'A hard-hitting batsman and a proven match-winner with his explosive style of play.'
+  },
+  { 
+    name: 'Kanhaiya Pawar', 
+    role: 'All Rounder', 
+    img: '/kanhaiya.png',
+    battingStyle: 'Left-hand bat',
+    bowlingStyle: 'Left-arm Medium Fast',
+    bio: 'A powerful left-handed hard hitter who can turn the game around at any moment.'
+  },
+  { 
+    name: 'Aditya Singh', 
+    role: 'Bowler', 
+    img: '/aditya singh.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Left-arm Fast Medium',
+    bio: 'A match-winning bowler known for his highly effective and impactful bowling action.'
+  },
+  { 
+    name: 'Sunil Sahani', 
+    role: 'Bowler', 
+    img: '/sunil.jpg',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Fast',
+    bio: 'A highly effective bowler with significant pace, who also contributes as a good fielder.'
+  },
+  { 
+    name: 'Bhuvnesh Singh Chouhan', 
+    role: 'All Rounder', 
+    img: '/bhuvnesh.jpeg',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Leg Spin',
+    bio: 'A consistent and skillful all-rounder, contributing valuable performances with both bat and ball.'
+  },
+  { 
+    name: 'Deepraj Gole', 
+    role: 'Batter', 
+    img: '/deepraj.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Medium',
+    bio: 'An excellent and consistent batsman, known for his reliable and impressive batting.'
+  },
+  { 
+    name: 'Dharmendra Kachhava', 
+    role: 'All Rounder', 
+    img: '/dharmendra.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Fast Medium',
+    bio: 'A formidable all-rounder with a "Malinga-like" bowling action that often troubles batsmen.'
+  },
+  { 
+    name: 'Adarsh Soni', 
+    role: 'All Rounder', 
+    img: '/adarsh.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Fast',
+    bio: 'A complete match-winner with both bat and ball, who has also played with many star players in M.P.'
+  },
+  { 
+    name: 'Bhavesh Sharma', 
+    role: 'Bowler', 
+    img: '/bhavesh.jpg',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Fast',
+    bio: 'A bowler with consistent pace and line, complemented by his excellent fielding skills.'
+  },
+  { 
+    name: 'Tanishq Sharma', 
+    role: 'Batter', 
+    img: '/tanishq.jpg',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Fast',
+    bio: 'A hard-hitting batsman known for his aggressive and powerful style of play.'
+  },
+  { 
+    name: 'Avinash Kumar', 
+    role: 'All Rounder', 
+    img: '/avinash.jpeg',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Fast',
+    bio: 'A solid all-rounder who contributes effectively as both a good batter and bowler.'
+  },
+  { 
+    name: 'Rajveer Singh', 
+    role: 'Batter', 
+    img: '/rajveer.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Medium',
+    bio: 'An effective and stylish batsman who makes an impact with his elegant shots.'
+  },
+  { 
+    name: 'Abhi Kushwaha', 
+    role: 'All Rounder', 
+    img: '/abhi.png', // Note: Duplicate name, consider a unique filename like '/aditya_mishra.jpg'
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Fast',
+    bio: 'He is a good hard-hitter and a fast bowler, making him the complete all-rounder package.'
+  },
+  { 
+    name: 'Aditya Mishra', 
+    role: 'All Rounder', 
+    img: '/aditya mishra.png', // Note: Duplicate name, consider a unique filename like '/aditya_mishra.jpg'
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Fast Medium',
+    bio: 'A good cutter bowler who deceives batsmen with his clever variations.'
+  },
+  { 
+    name: 'Anurag Patidar', 
+    role: 'Bowler', 
+    img: '/anurag.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Fast Medium',
+    bio: 'A tall left-arm bowler who generates significant bounce to trouble the opposition.'
+  },
+  { 
+    name: 'Arpit Dawar', 
+    role: 'All Rounder', 
+    img: '/arpit.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Left-arm Medium',
+    bio: 'An effective hard-hitting all-rounder, capable of making a big impact.'
+  },
+  { 
+    name: 'Jayesh Yadav', 
+    role: 'All Rounder', 
+    img: '/jayesh.png',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Left-arm Medium',
+    bio: 'A good cutter bowler, adept at varying his pace and line.'
+  },
+  { 
+    name: 'Rishi Pal', 
+    role: 'Batter', 
+    img: '/rishi.jpg',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Off Spin',
+    bio: 'A good hard-hitting batsman who can score quickly and put pressure on the bowlers.'
+  }
+>>>>>>> fd73de9115c130ff661666ef4b136795de1592bc
 ];
 
 const filterOptions = ['All', 'Batters', 'Bowlers', 'All Rounders'];
@@ -306,4 +469,7 @@ const Team = () => {
 };
 
 export default Team;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fd73de9115c130ff661666ef4b136795de1592bc
