@@ -4,7 +4,6 @@ import { X, User, Shield, Zap } from 'lucide-react'; // बेहतरीन �
 
 // खिलाड़ियों की विस्तृत और अपडेटेड जानकारी
 const players = [
-<<<<<<< HEAD
   { 
     name: 'Harsh Verma', 
     role: 'Captain, Batter', 
@@ -164,8 +163,7 @@ const players = [
     battingStyle: 'Right-hand bat',
     bowlingStyle: 'Right-arm Off Spin',
     bio: 'A good hard-hitting batsman who can score quickly and put pressure on the bowlers.'
-  }
-=======
+  },
   { 
     name: 'Harsh Verma', 
     role: 'Captain, Batter', 
@@ -326,7 +324,6 @@ const players = [
     bowlingStyle: 'Right-arm Off Spin',
     bio: 'A good hard-hitting batsman who can score quickly and put pressure on the bowlers.'
   }
->>>>>>> fd73de9115c130ff661666ef4b136795de1592bc
 ];
 
 const filterOptions = ['All', 'Batters', 'Bowlers', 'All Rounders'];
@@ -469,7 +466,3 @@ const Team = () => {
 };
 
 export default Team;
-<<<<<<< HEAD
-
-=======
->>>>>>> fd73de9115c130ff661666ef4b136795de1592bc
