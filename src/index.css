@@ -8,3 +8,13 @@
 .group:hover .flex {
   animation-play-state: paused;
 }
+
+/* Slider Dots को स्टाइल करने के लिए */
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #d1d5db; /* आपकी Light Grey थीम का रंग */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FFD700; /* आपकी Gold थीम का रंग */
+}
