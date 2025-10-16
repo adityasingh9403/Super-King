@@ -6,7 +6,7 @@ import Slider from 'react-slick'; // Slider को इम्पोर्ट क�
 // --- Data for Home Page ---
 const foundersData = [
   { name: 'Harsh Verma', img: '/captain.png', title: 'Founder' },
-  { name: 'Founder Two', img: '/naveen.jpg', title: 'Founder' },
+  { name: 'Naveen Khaira', img: '/naveen.jpg', title: 'Founder' },
   { name: 'Deepak', img: '/deepak.png', title: 'Founder' },
 ];
 
