@@ -113,18 +113,19 @@ const Home = () => {
           animate="visible"
         >
           {/* Section 1: Main Heading & Tagline */}
+          {/* Section 1: Main Heading & Tagline */}
           <motion.div variants={itemVariants}>
-            {/* ✅ लोगो और हेडिंग को एक साथ रखने के लिए Flexbox */}
-            <div className="flex justify-center items-center gap-4 md:gap-6 mb-4">
+            {/* ✅ लोगो को टेक्स्ट के ऊपर रखने के लिए वर्टिकल Flexbox */}
+            <div className="flex flex-col justify-center items-center gap-4 mb-4">
               <motion.img
                 src="/logo.png"
                 alt="Super King Logo"
-                className="h-16 md:h-20 lg:h-24 w-auto"
+                className="h-20 md:h-24 lg:h-28 w-auto" // लोगो को थोड़ा और प्रोमिनेंट बनाया गया है
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               />
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-super-king-gold leading-tight font-heading drop-shadow-lg text-left">
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-super-king-gold leading-tight font-heading drop-shadow-lg text-center">
                 WE ARE <span className="text-super-king-light-grey">SUPER KING</span>
               </h2>
             </div>
