@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion'; // AnimatePresence को इम्पोर्ट करें
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,6 @@ const Navbar = () => {
   const getLinkClass = ({ isActive }) => `${commonClasses} ${isActive ? activeClass : inactiveClass}`;
   const mobileLinkClass = "block px-3 py-2 rounded-md text-base font-medium";
 
-  // मेनू के खुलने और बंद होने के लिए एनिमेशन वेरिएंट्स
   const mobileMenuVariants = {
     open: {
       opacity: 1,
@@ -37,7 +36,7 @@ const Navbar = () => {
                 <Link to="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
                   <img src="/logo.png" alt="Super King Cricket Team Logo" className="h-10 w-auto" />
                   <span className="text-2xl font-bold text-super-king-gold hover:text-super-king-dark-gold transition-colors font-heading hidden sm:block">
-                    Super King Cricket Team
+                    Super King – Tennis Ball Cricket Team
                   </span>
                 </Link>
               </div>
@@ -65,19 +64,23 @@ const Navbar = () => {
                 aria-expanded={isOpen}
               >
                 <span className="sr-only">Open main menu</span>
-                {/* ✅ एनिमेटेड आइकॉन */}
-                <motion.div animate={isOpen ? "open" : "closed"} className="w-6 h-6">
+                {/* ✅ एनिमेटेड आइकॉन (सही अलाइनमेंट के साथ) */}
+                <motion.div animate={isOpen ? "open" : "closed"} className="relative w-6 h-6">
+                  {/* Top bar */}
                   <motion.span
-                    className="block absolute h-0.5 w-6 bg-current transform transition duration-500 ease-in-out"
-                    variants={{ closed: { y: -6 }, open: { y: 0, rotate: 45 } }}
+                    className="block absolute h-0.5 w-6 bg-current"
+                    variants={{ closed: { y: 6 }, open: { y: 11, rotate: 45 } }}
                   ></motion.span>
+                  {/* Middle bar */}
                   <motion.span
-                    className="block absolute h-0.5 w-6 bg-current transform transition duration-500 ease-in-out"
+                    className="block absolute h-0.5 w-6 bg-current"
+                    style={{ top: 11 }}
                     variants={{ closed: { opacity: 1 }, open: { opacity: 0 } }}
                   ></motion.span>
+                  {/* Bottom bar */}
                   <motion.span
-                    className="block absolute h-0.5 w-6 bg-current transform transition duration-500 ease-in-out"
-                    variants={{ closed: { y: 6 }, open: { y: 0, rotate: -45 } }}
+                    className="block absolute h-0.5 w-6 bg-current"
+                    variants={{ closed: { y: 16 }, open: { y: 11, rotate: -45 } }}
                   ></motion.span>
                 </motion.div>
               </button>

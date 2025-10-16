@@ -11,13 +11,14 @@ import Slider from 'react-slick';
 const foundersData = [
   { name: 'Harsh Verma', img: '/harsh.jpg', title: 'Founder' },
   { name: 'Naveen Khaira', img: '/naveen.jpg', title: 'Founder' },
-  { name: 'Deepak', img: '/deepak.png', title: 'Founder' },
+  { name: 'Deepak', img: '/deepak.jpg', title: 'Founder' },
 ];
 
 const coFoundersData = [
   { name: 'Aditya Singh', img: '/aditya singh.png', title: 'Co-Founder' },
   { name: 'Ram Nath Yogi', img: '/yogi.png', title: 'Co-Founder' },
   { name: 'Tanishq Sharma', img: '/tanishq.jpg', title: 'Co-Founder' },
+  { name: 'Harsh Sinha', img: '/harsh sinha.jpg', title: 'Co-Founder' },
 ];
 
 const teamPhotos = [
@@ -113,9 +114,20 @@ const Home = () => {
         >
           {/* Section 1: Main Heading & Tagline */}
           <motion.div variants={itemVariants}>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-super-king-gold leading-tight mb-4 font-heading drop-shadow-lg">
-              WE ARE <span className="text-super-king-light-grey">SUPER KING</span>
-            </h2>
+            {/* ✅ लोगो और हेडिंग को एक साथ रखने के लिए Flexbox */}
+            <div className="flex justify-center items-center gap-4 md:gap-6 mb-4">
+              <motion.img
+                src="/logo.png"
+                alt="Super King Logo"
+                className="h-16 md:h-20 lg:h-24 w-auto"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+              />
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-super-king-gold leading-tight font-heading drop-shadow-lg text-left">
+                WE ARE <span className="text-super-king-light-grey">SUPER KING</span>
+              </h2>
+            </div>
             <p className="text-xl md:text-2xl text-super-king-light-grey max-w-3xl mx-auto">
               Forged in Passion, Defined by Victory. This is Our Kingdom.
             </p>

@@ -7,12 +7,10 @@ const sponsorsData = [
     {
         name: 'Fire Safety Solutions',
         logo: '/sponser1.webp',
-        containerClass: 'w-11/12 max-w-[320px] sm:w-80'
     },
     {
         name: 'SK Fabrication',
         logo: '/sponser2.jpeg', // फ़ाइल एक्सटेंशन ठीक किया गया
-        containerClass: 'w-11/12 max-w-[240px] sm:w-60'
     },
 ];
 
@@ -33,6 +31,9 @@ const navLinks = [
 ];
 
 const Footer = () => {
+    // ✅ सभी स्पॉन्सर के लिए एक ही साइज़ का क्लास
+    const sponsorContainerClass = "w-11/12 max-w-[300px] sm:w-72 h-36";
+
     return (
         <footer className="bg-super-king-black border-t-2 border-super-king-blue pt-16 pb-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +45,8 @@ const Footer = () => {
                         {sponsorsData.map((sponsor, index) => (
                             <div
                                 key={index}
-                                className={`bg-white p-4 rounded-lg shadow-lg flex justify-center items-center h-32 transition-transform duration-300 hover:scale-105 hover:shadow-xl ${sponsor.containerClass}`}
+                                // ✅ अब दोनों कंटेनर की हाइट और विड्थ एक जैसी है
+                                className={`bg-white p-4 rounded-lg shadow-lg flex justify-center items-center transition-transform duration-300 hover:scale-105 hover:shadow-xl ${sponsorContainerClass}`}
                             >
                                 <img
                                     src={sponsor.logo}
@@ -56,13 +58,13 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* ✅ नया बेहतर फुटर लेआउट */}
+                {/* Footer Layout */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
                     {/* Column 1: About the Team */}
                     <div className="flex flex-col items-center md:items-start">
                         <Link to="/" className="flex items-center space-x-2 mb-4">
                             <img src="/logo.png" alt="Super King Logo" className="h-10 w-auto" />
-                            <span className="text-xl font-bold text-super-king-gold font-heading">Super King Cricket Team</span>
+                            <span className="text-xl font-bold text-super-king-gold font-heading">Super King – Tennis Ball Cricket Team</span>
                         </Link>
                         <p className="text-super-king-light-grey/80 max-w-xs">
                             A passionate tennis ball cricket team from Rau, Indore, believing in Team Spirit, Passion & Fair Play.
