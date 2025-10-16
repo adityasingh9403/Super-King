@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const players = [
   { 
     name: 'Harsh Verma', 
-    role: 'Vice-Captain, Batter', 
+    role: 'Captain, Batter', 
     img: '/captain.png',
     battingStyle: 'Right-hand bat',
     bowlingStyle: 'Right-arm Off Spin',
@@ -13,7 +13,7 @@ const players = [
   },
   { 
     name: 'Nitin Patel', 
-    role: 'Captain, Batter', 
+    role: 'Vice-Captain, Batter', 
     img: '/nitin.png',
     battingStyle: 'Right-hand bat',
     bowlingStyle: 'Right-arm Medium',
