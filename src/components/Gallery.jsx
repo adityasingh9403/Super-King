@@ -5,12 +5,19 @@ import { motion } from 'framer-motion'; // Framer Motion को इम्पो�
 const videoIds = ['33N83LPd__Q', '6oKIRFd_FBo', 'FCV87dKWoTU'];
 
 // अपने YouTube Shorts के ID यहाँ डालें (URL में shorts/ के बाद वाला हिस्सा)
+
 const shortsIds = [
+
   'MLziGqcytxg', // From https://youtube.com/shorts/MLziGqcytxg?si=UVHwJQ31TkeZnEHm
+
   'iH5sAMPtNos', // From https://youtube.com/shorts/iH5sAMPtNos?si=BWo3nUtiRVvKEoYB
+
   'ZoH4gCrU0pU',  // From https://youtube.com/shorts/ZoH4gCrU0pU?si=uJ5B5yWLJgiesXO2
+
   'GsqItt7abOM',
+
   'MLziGqcytxg'
+
 ];
 
 // एनिमेशन के लिए वेरिएंट्स
@@ -35,9 +42,9 @@ const itemVariants = {
 
 const Gallery = () => {
   return (
-    <section 
-      id="gallery" 
-      className="py-20 md:py-28 bg-super-king-grey flex-grow bg-cover bg-center bg-fixed"
+    <section
+      id="gallery"
+      className="py-24 md:py-32 bg-super-king-grey flex-grow bg-cover bg-center bg-fixed" // पैडिंग अपडेटेड
       style={{ backgroundImage: "url('/stadium_bg.jpg')" }} // बाकी पेजों की तरह बैकग्राउंड इमेज
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,20 +57,21 @@ const Gallery = () => {
         >
           {/* पेज टाइटल */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-super-king-gold font-heading">Our Gallery</h2>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-super-king-gold font-heading drop-shadow-lg">Our Gallery</h2> {/* drop-shadow-lg जोड़ा गया */}
             <p className="text-lg text-super-king-light-grey mt-4">Moments from the field, captured forever.</p>
           </motion.div>
 
           {/* === वीडियो सेक्शन === */}
           <motion.div variants={itemVariants} className="mb-20">
-            <h3 className="text-3xl font-bold text-super-king-light-grey font-heading mb-8 text-center md:text-left">Match Highlights & Videos</h3>
+            <h3 className="text-3xl font-bold text-super-king-light-grey font-heading mb-8 text-center md:text-left drop-shadow-md">Match Highlights & Videos</h3> {/* drop-shadow-md जोड़ा गया */}
             {videoIds.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {videoIds.map((id, index) => (
-                  <motion.div 
-                    key={id} 
+                  <motion.div
+                    key={id}
                     variants={itemVariants} // हर वीडियो कार्ड एनिमेट होगा
-                    className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 hover:scale-105 hover:border-super-king-gold cursor-pointer"
+                    // ✅ Glassmorphism और बेहतर होवर इफ़ेक्ट
+                    className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 hover:scale-105 hover:border-super-king-gold cursor-pointer bg-black bg-opacity-50 backdrop-blur-md"
                   >
                     <iframe
                       className="w-full h-full"
@@ -83,14 +91,15 @@ const Gallery = () => {
 
           {/* === शॉर्ट्स सेक्शन === */}
           <motion.div variants={itemVariants} className="mb-20">
-            <h3 className="text-3xl font-bold text-super-king-light-grey font-heading mb-8 text-center md:text-left">Shorts & Reels</h3>
+            <h3 className="text-3xl font-bold text-super-king-light-grey font-heading mb-8 text-center md:text-left drop-shadow-md">Shorts & Reels</h3> {/* drop-shadow-md जोड़ा गया */}
             {shortsIds.length > 0 ? (
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                 {shortsIds.map((id, index) => (
-                  <motion.div 
-                    key={id} 
+                  <motion.div
+                    key={id}
                     variants={itemVariants} // हर शॉर्ट्स कार्ड एनिमेट होगा
-                    className="aspect-w-9 aspect-h-16 rounded-2xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 hover:scale-105 hover:border-super-king-gold cursor-pointer"
+                    // ✅ Glassmorphism और बेहतर होवर इफ़ेक्ट
+                    className="aspect-w-9 aspect-h-16 rounded-2xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 hover:scale-105 hover:border-super-king-gold cursor-pointer bg-black bg-opacity-50 backdrop-blur-md"
                   >
                     <iframe
                       className="w-full h-full"

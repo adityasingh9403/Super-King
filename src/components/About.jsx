@@ -28,7 +28,7 @@ const About = () => {
     // सेक्शन को पूरी उपलब्ध ऊंचाई लेने और बैकग्राउंड इमेज सेट करने के लिए
     <section 
       id="about" 
-      className="py-24 md:py-32 bg-super-king-grey flex-grow flex items-center bg-cover bg-center bg-fixed"
+      className="relative flex-grow flex flex-col justify-center items-center text-center overflow-hidden py-24 bg-cover bg-center bg-fixed"
       style={{ backgroundImage: "url('/stadium_bg.jpg')" }} // बैकग्राउंड इमेज (public फोल्डर में रखें)
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

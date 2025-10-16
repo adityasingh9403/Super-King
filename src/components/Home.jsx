@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick'; // Slider को इम्पोर्ट करें
 
-// आपके दिए गए अपडेटेड आंकड़े
-const stats = [
-  { label: 'Matches Won', value: '45+' },
-  { label: 'Championships', value: '5' },
-  { label: 'Top Scorer', value: 'Ram Nath Yogi (800 Runs)' },
-  { label: 'Best Bowler', value: 'Aditya Singh (40 Wickets)' },
+// --- Data for Home Page ---
+const foundersData = [
+  { name: 'Harsh Verma', img: '/captain.png', title: 'Founder' },
+  { name: 'Founder Two', img: '/naveen.jpg', title: 'Founder' },
+  { name: 'Deepak', img: '/deepak.png', title: 'Founder' },
 ];
 
-// स्लाइडर के लिए टीम की फोटोज़ का डेटा
+const coFoundersData = [
+  { name: 'Aditya Singh', img: '/aditya singh.png', title: 'Co-Founder' },
+  { name: 'Ram Nath Yogi', img: '/yogi.png', title: 'Co-Founder' },
+  { name: 'Tanishq Sharma', img: '/tanishq.jpg', title: 'Co-Founder' },
+];
+
 const teamPhotos = [
   { id: 1, src: '/super 1.jpg', alt: 'Team celebrating a wicket' },
   { id: 2, src: '/super 2.jpg', alt: 'Batsman hitting a six' },
@@ -22,8 +26,7 @@ const teamPhotos = [
   { id: 7, src: '/super 7.jpg', alt: 'Team group photo' }
 ];
 
-
-// Framer Motion के लिए एनिमेशन वेरिएंट्स
+// --- Animation Variants ---
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -42,37 +45,21 @@ const itemVariants = {
 };
 
 const Home = () => {
-
-  // इमेज स्लाइडर के लिए सेटिंग्स
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
-    centerMode: true,
-    centerPadding: '40px',
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
+    autoplaySpeed: 4000,
+    fade: true,
+    arrows: false,
   };
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative flex-grow flex flex-col justify-center items-center text-center overflow-hidden py-24 bg-cover bg-center bg-fixed"
       style={{ backgroundImage: "url('/stadium_bg.jpg')" }}
     >
@@ -80,7 +67,7 @@ const Home = () => {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="space-y-16" // सभी सेक्शंस के बीच स्पेस
+          className="space-y-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -96,30 +83,76 @@ const Home = () => {
             </p>
           </motion.div>
 
-          {/* ✅ बदला हुआ: Section 2: इमेज स्लाइडर */}
+          {/* Section 2: Image Slider */}
           <motion.div variants={itemVariants}>
              <h3 className="text-3xl font-bold text-super-king-gold font-heading mb-8 drop-shadow-lg">Glimpses From The Field</h3>
              <Slider {...sliderSettings}>
                 {teamPhotos.map(photo => (
-                  <div key={photo.id} className="px-2 md:px-4">
-                    <div className="bg-black bg-opacity-50 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl overflow-hidden">
-                      <img src={photo.src} alt={photo.alt} className="w-full h-56 object-cover" />
-                    </div>
+                  <div key={photo.id}>
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="w-full h-80 sm:h-96 md:h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl border border-white/20"
+                    />
                   </div>
                 ))}
              </Slider>
           </motion.div>
 
-          {/* Section 3: Key Stats */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-3xl font-bold text-super-king-gold font-heading mb-8 drop-shadow-lg">Our Track Record</h3>
-            <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 bg-black bg-opacity-50 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <p className="text-3xl md:text-4xl font-extrabold text-super-king-gold font-heading">{stat.value}</p>
-                  <p className="text-sm md:text-base text-super-king-light-grey mt-2">{stat.label}</p>
-                </div>
-              ))}
+          {/* Section 3: Founders & Co-Founders */}
+          <motion.div variants={itemVariants} className="space-y-20">
+            {/* Founders Section */}
+            <div>
+              <h3 className="text-3xl lg:text-4xl font-bold text-super-king-gold font-heading mb-20 drop-shadow-lg">Meet The Founders</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-24 sm:gap-x-8">
+                {foundersData.map((person, index) => (
+                  <motion.div
+                    key={index}
+                    className="relative bg-black bg-opacity-50 backdrop-blur-md rounded-2xl pt-20 p-6 text-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-105 hover:border-super-king-gold"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                  >
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <img
+                        src={person.img}
+                        alt={person.name}
+                        className="w-36 h-36 rounded-full border-4 border-super-king-gold object-cover shadow-lg"
+                      />
+                    </div>
+                    <h4 className="text-xl font-bold text-super-king-light-grey font-heading">{person.name}</h4>
+                    <p className="text-super-king-gold">{person.title}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Co-Founders Section */}
+            <div>
+              <h3 className="text-3xl lg:text-4xl font-bold text-super-king-gold font-heading mb-20 drop-shadow-lg">Co-Founders</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-24 sm:gap-x-8">
+                {coFoundersData.map((person, index) => (
+                  <motion.div
+                    key={index}
+                    className="relative bg-black bg-opacity-50 backdrop-blur-md rounded-2xl pt-20 p-6 text-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-105 hover:border-super-king-gold"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                  >
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <img
+                        src={person.img}
+                        alt={person.name}
+                        className="w-36 h-36 rounded-full border-4 border-super-king-gold object-cover shadow-lg"
+                      />
+                    </div>
+                    <h4 className="text-xl font-bold text-super-king-light-grey font-heading">{person.name}</h4>
+                    <p className="text-super-king-gold">{person.title}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
 
