@@ -23,7 +23,7 @@ const players = [
   {
     name: 'Ram Nath Yogi',
     role: 'Batter',
-    img: '/yogi.png',
+    img: '/yogi.webp',
     battingStyle: 'Right-hand bat',
     bowlingStyle: 'Right-arm Medium',
     bio: 'A hard-hitting batsman and a proven match-winner with his explosive style of play.'
@@ -31,7 +31,7 @@ const players = [
   {
     name: 'Kanhaiya Pawar',
     role: 'All Rounder',
-    img: '/kanhaiya.png',
+    img: '/kanhaiya.jpg',
     battingStyle: 'Left-hand bat',
     bowlingStyle: 'Left-arm Medium Fast',
     bio: 'A powerful left-handed hard hitter who can turn the game around at any moment.'
@@ -63,7 +63,7 @@ const players = [
   {
     name: 'Deepraj Gole',
     role: 'Batter',
-    img: '/deepraj.png',
+    img: '/deepraj.webp',
     battingStyle: 'Right-hand bat',
     bowlingStyle: 'Right-arm Medium',
     bio: 'An excellent and consistent batsman, known for his reliable and impressive batting.'
@@ -71,7 +71,7 @@ const players = [
   {
     name: 'Dharmendra Kachhava',
     role: 'All Rounder',
-    img: '/dharmendra.png',
+    img: '/dharmendra.jpg',
     battingStyle: 'Right-hand bat',
     bowlingStyle: 'Right-arm Fast Medium',
     bio: 'A formidable all-rounder with a "Malinga-like" bowling action that often troubles batsmen.'
@@ -151,7 +151,7 @@ const players = [
   {
     name: 'Jayesh Yadav',
     role: 'All Rounder',
-    img: '/jayesh.png',
+    img: '/jayesh.webp',
     battingStyle: 'Right-hand bat',
     bowlingStyle: 'Left-arm Medium',
     bio: 'A good cutter bowler, adept at varying his pace and line.'
@@ -235,6 +235,14 @@ const players = [
     battingStyle: 'Right-hand bat',
     bowlingStyle: 'Right-arm Fast Medium',
     bio: 'A smart bowler who makes excellent use of angles to trouble batsmen.'
+  },
+  {
+    name: 'Anshuman Sharma',
+    role: 'Batter',
+    img: '/anshuman.jpg',
+    battingStyle: 'Right-hand bat',
+    bowlingStyle: 'Right-arm Off Spin',
+    bio: 'A smart batter who makes excellent use of no look shot'
   }
 ];
 
